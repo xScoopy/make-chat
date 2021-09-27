@@ -16,7 +16,7 @@ app.set('view engine', 'handlebars');
 app.use('/public', express.static('public'))
 
 app.get('/', (req, res) => {
-  res.render('index.handlebars');
+  res.render('index.handlebars', {layout: false});
 })
 
 server.listen('3000', () => {
